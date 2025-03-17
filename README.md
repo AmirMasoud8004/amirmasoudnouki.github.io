@@ -15,7 +15,7 @@ Welcome to my GitHub portfolio! I am a dedicated M.Sc. student in Power Electron
   Performed beginner-level programming for Siemens S7-400 PLC using Siemens TIA Portal.
 
 ## 📄 Resume
-Download my full resume [here](AmirMasoudNouki-Resume.pdf).
+Download my full resume [here](https://github.com/Amirmasoudnouki/Amirmasoudnouki.github.io/blob/main/CV_Mar2025.pdf).
 
 ## 📫 Contact Me
 - **Email:** [Amirmasoud8004@gmail.com](mailto:Amirmasoud8004@gmail.com)  
