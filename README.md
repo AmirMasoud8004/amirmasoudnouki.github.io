@@ -25,9 +25,8 @@ Download my full resume [here](https://github.com/Amirmasoudnouki/Amirmasoudnouk
 ## 🎯 Hobbies
 |               |               |
 |---------------|---------------|
-| Reading books | Creative writing |
-| Listening to music | Sharing my experiences in a blog |
-| Camping and hanging out with friends | Walking and climbing mountains |
+| Reading technical books | Writing technical blogs|
+| Listening to music | Outdoor activities (hiking, camping) |
 
 ## 🌐 Visit My Website
 This portfolio is also hosted as a website at [https://amirmasoud8004.github.io](https://amirmasoud8004.github.io).
