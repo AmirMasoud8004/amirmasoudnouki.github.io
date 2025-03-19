@@ -12,7 +12,27 @@
             line-height: 1.6;
             background-color: #f0f4f8;
             color: #333;
+            display: flex;
+            justify-content: center;
         }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Left side - Profile and Contact Information */
+        .left-side {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        /* Right side - Skills, Projects, Resume, etc. */
+        .right-side {
+            flex: 2;
+            padding-left: 40px;
+        }
+
         h1, h2 {
             opacity: 0;
             transform: translateY(20px);
@@ -95,51 +115,58 @@
     </style>
 </head>
 <body>
-    <div class="header-container">
-        <img src="https://github.com/AmirMasoud8004/amirmasoudnouki.github.io/raw/main/-2147483648_-211069.jpg" 
-             alt="Amir Masoud Nouki" class="profile-pic">
-        <div class="header-text">
-            <h1>Amir Masoud Nouki 👨‍💻</h1>
-            <p class="welcome-text">Welcome to my personal website!</p>
+    <div class="container">
+        <!-- Left Side: Profile and Contact -->
+        <div class="left-side">
+            <div class="header-container">
+                <img src="https://github.com/AmirMasoud8004/amirmasoudnouki.github.io/raw/main/-2147483648_-211069.jpg" 
+                     alt="Amir Masoud Nouki" class="profile-pic">
+                <div class="header-text">
+                    <h1>Amir Masoud Nouki 👨‍💻</h1>
+                    <p class="welcome-text">Welcome to my personal website!</p>
+                </div>
+            </div>
+
+            <h2>📫 Contact Me</h2>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:Amirmasoud8004@gmail.com">Amirmasoud8004@gmail.com</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/amir-masoud-nouki-1744982b2/">Amir Masoud Nouki</a></li>
+                <li><strong>Phone:</strong> (+98) 9150685949</li>
+                <li><strong>Telegram:</strong> <a href="https://t.me/YourTelegramID">@a_m_n_807</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Side: Skills, Projects, Resume, etc. -->
+        <div class="right-side">
+            <h2>🔧 Skills</h2>
+            <ul>
+                <li><strong>Applications and Scientific Tools:</strong> MATLAB, Proteus, Code Vision AVR, Altium Designer, FEMM, EMTP, Maxwell, DIgSILENT, AutoCAD</li>
+                <li><strong>Programming Languages:</strong> C, MATLAB, Python</li>
+                <li><strong>Operating Systems:</strong> Microsoft Windows, Linux</li>
+                <li><strong>Typesetting:</strong> Microsoft Word, LaTeX</li>
+            </ul>
+
+            <h2>🛠️ Projects</h2>
+            <ul>
+                <li><strong>Power Oscillation Detection in Power Systems</strong> (Khorasan Regional Electricity Co., Sep 2023)</li>
+                <li><strong>PLC Programming Project</strong> (Mahya Sanat Co., Sep 2022)</li>
+            </ul>
+
+            <h2>📄 Resume</h2>
+            <ul>
+                <p>Download my full resume <a href="https://github.com/Amirmasoudnouki/Amirmasoudnouki.github.io/blob/main/CV_Mar2025.pdf">here</a>.</p>
+            </ul>
+
+            <h2>🎯 Hobbies</h2>
+            <ul>
+                <li><strong>Reading technical books</strong></li>
+                <li><strong>Writing technical blogs</strong></li>
+                <li><strong>Listening to music</strong></li>
+                <li><strong>Outdoor activities (hiking, camping)</strong></li>
+            </ul>
         </div>
     </div>
 
-    <h2>🔧 Skills</h2>
-    <ul>
-        <li><strong>Applications and Scientific Tools:</strong> MATLAB, Proteus, Code Vision AVR, Altium Designer, FEMM, EMTP, Maxwell, DIgSILENT, AutoCAD</li>
-        <li><strong>Programming Languages:</strong> C, MATLAB, Python</li>
-        <li><strong>Operating Systems:</strong> Microsoft Windows, Linux</li>
-        <li><strong>Typesetting:</strong> Microsoft Word, LaTeX</li>
-    </ul>
-
-    <h2>🛠️ Projects</h2>
-    <ul>
-        <li><strong>Power Oscillation Detection in Power Systems</strong> (Khorasan Regional Electricity Co., Sep 2023)</li>
-        <li><strong>PLC Programming Project</strong> (Mahya Sanat Co., Sep 2022)</li>
-    </ul>
-
-    <h2>📄 Resume</h2>
-    <ul>
-        <p>Download my full resume <a href="https://github.com/Amirmasoudnouki/Amirmasoudnouki.github.io/blob/main/CV_Mar2025.pdf">here</a>.</p>
-    </ul>
-
-    <h2>📫 Contact Me</h2>
-    <ul>
-        <li><strong>Email:</strong> <a href="mailto:Amirmasoud8004@gmail.com">Amirmasoud8004@gmail.com</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/amir-masoud-nouki-1744982b2/">Amir Masoud Nouki</a></li>
-        <li><strong>Phone:</strong> (+98) 9150685949</li>
-        <li><strong>Telegram:</strong> <a href="https://t.me/YourTelegramID">@a_m_n_807</a></li>
-    </ul>
-
-    <h2>🎯 Hobbies</h2>
-    <ul>
-        <li><strong>Reading technical books </strong></li>
-        <li><strong>Writing technical blogs </strong></li>
-        <li><strong> Listening to music </strong></li>
-        <li><strong>Outdoor activities (hiking, camping) </strong></li>
-    </ul>
-</body>
-    </div>
     <p style="text-align: center; color: #7f8c8d; font-size: 12px;">Last updated: March 17, 2025</p>
-</html>
+</body>
 </html>
