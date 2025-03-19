@@ -4,100 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amir Masoud Nouki - Project Portfolio</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 40px;
-        line-height: 1.6;
-        background-color: #f0f4f8; /* پس‌زمینه روشن */
-        color: #333; /* رنگ متن تیره‌تر */
-    }
-    h1 {
-        color: #2c3e50;
-        border-bottom: 2px solid #3498db; /* خط زیر عنوان */
-        padding-bottom: 10px;
-    }
-    h2 {
-        color: #34495e;
-        margin-top: 30px;
-    }
-    a {
-        color: #3498db;
-        text-decoration: none;
-        transition: color 0.3s; /* انیمیشن تغییر رنگ لینک */
-    }
-    a:hover {
-        color: #2980b9;
-        text-decoration: underline;
-    }
-    ul, table {
-        background-color: #ffffff; /* پس‌زمینه سفید برای لیست و جدول */
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* سایه ملایم */
-    }
-    table {
-        width: 60%;
-        border-collapse: collapse;
-    }
-    table, th, td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-    } 
-.header-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
+    <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        h1, h2 {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
 
-.profile-pic {
-    width: 200px;
-    border-radius: 50%;
-    border: 4px solid #3498db;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-.header-text {
-    display: flex;
-    flex-direction: column;
-}
+        /* Profile picture animation */
+        .profile-pic {
+            width: 200px;
+            border-radius: 50%;
+            border: 4px solid #3498db;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: scale(0.5);
+            animation: profilePicAnim 1s forwards;
+        }
 
-.header-text h1 {
-    margin: 0;
-    font-size: 28px;
-    color: #2c3e50;
-}
+        @keyframes profilePicAnim {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
 
-.header-text hr {
-    width: 100%;
-    border: none;
-    border-top: 2px solid #3498db;
-    margin: 5px 0;
-}
+        /* Hover effects for links and buttons */
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+        }
 
-.welcome-text {
-    font-size: 16px;
-    color: #555;
-}
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+            transform: scale(1.1);
+        }
 
-        
-</style>
+        /* Hover effects for list items (projects) */
+        ul li:hover {
+            background-color: #f0f4f8;
+            transform: scale(1.05);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        /* Header animation (profile sliding in from left) */
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: slideInFromLeft 1s forwards;
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="header-container">
-    <img src="https://github.com/AmirMasoud8004/amirmasoudnouki.github.io/raw/main/-2147483648_-211069.jpg" 
-         alt="Amir Masoud Nouki" class="profile-pic">
-    <div class="header-text">
-        <h1>Amir Masoud Nouki 👨‍💻</h1>
-        
-        <p class="welcome-text">Welcome to my personal website!</p>
+    <div class="header-container">
+        <img src="https://github.com/AmirMasoud8004/amirmasoudnouki.github.io/raw/main/-2147483648_-211069.jpg" 
+             alt="Amir Masoud Nouki" class="profile-pic">
+        <div class="header-text">
+            <h1>Amir Masoud Nouki 👨‍💻</h1>
+            <p class="welcome-text">Welcome! I’m an engineer passionate about learning and creating. Explore my journey and let's connect!</p>
+        </div>
     </div>
-</div>
-
-
-
-    <p>Here, you can find a glimpse of my background, skills, and projects. Feel free to explore and connect.</p>
 
     <h2>🔧 Skills</h2>
     <ul>
@@ -109,17 +114,15 @@
 
     <h2>🛠️ Projects</h2>
     <ul>
-        <li><strong>Power Oscillation Detection in Power Systems</strong> (Khorasan Regional Electricity Co., Sep 2023)<br>
-            Investigated and analyzed power oscillation detection techniques in power networks using MATLAB and DIgSILENT.</li>
-        <li><strong>PLC Programming Project</strong> (Mahya Sanat Co., Sep 2022)<br>
-            Performed beginner-level programming for Siemens S7-400 PLC using Siemens TIA Portal.</li>
+        <li><strong>Power Oscillation Detection in Power Systems</strong> (Khorasan Regional Electricity Co., Sep 2023)</li>
+        <li><strong>PLC Programming Project</strong> (Mahya Sanat Co., Sep 2022)</li>
     </ul>
 
     <h2>📄 Resume</h2>
     <ul>
-    <p>Download my full resume <a href="https://github.com/Amirmasoudnouki/Amirmasoudnouki.github.io/blob/main/CV_Mar2025.pdf">here</a>.</p>
+        <p>Download my full resume <a href="https://github.com/Amirmasoudnouki/Amirmasoudnouki.github.io/blob/main/CV_Mar2025.pdf">here</a>.</p>
     </ul>
-        
+
     <h2>📫 Contact Me</h2>
     <ul>
         <li><strong>Email:</strong> <a href="mailto:Amirmasoud8004@gmail.com">Amirmasoud8004@gmail.com</a></li>
@@ -128,31 +131,12 @@
         <li><strong>Telegram:</strong> <a href="https://t.me/YourTelegramID">@a_m_n_807</a></li>
     </ul>
 
-   <h2>🎯 Hobbies</h2>
+    <h2>🎯 Hobbies</h2>
     <ul>
-        <li><strong>Reading technical books </li>
-        <li><strong>Writing technical blogs </li>
-        <li><strong> Listening to music </li>
-        <li><strong>Outdoor activities (hiking, camping) </li>
+        <li><strong>Reading technical books </strong></li>
+        <li><strong>Writing technical blogs </strong></li>
+        <li><strong> Listening to music </strong></li>
+        <li><strong>Outdoor activities (hiking, camping) </strong></li>
     </ul>
-        
-    </body>
-        
-    <div style="text-align: center; margin-top: 20px;">
-    <a href="mailto:Amirmasoud8004@gmail.com" style="background-color: #3498db; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Contact Me</a>
-
-
-
-<h2>💬 Testimonials</h2>
-<p>
-    <strong>John Doe</strong>, Senior Engineer at XYZ Corp:
-    <br> "Amir Masoud is an exceptional engineer with a strong technical background. His ability to quickly understand complex problems and propose effective solutions makes him a great asset to any project."
-</p>
-
-
-
-        
-    
-    </div>
-    <p style="text-align: center; color: #7f8c8d; font-size: 12px;">Last updated: March 17, 2025</p>
+</body>
 </html>
