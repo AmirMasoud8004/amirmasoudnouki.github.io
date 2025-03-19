@@ -21,14 +21,14 @@
         .profile-section {
             display: flex;
             align-items: center;
-            margin-bottom: 40px;
+            margin-bottom: 20px; /* Reduced margin for tighter layout */
             text-align: left;
             width: 100%;
         }
 
         .profile-pic {
-            width: 150px;
-            height: 150px;
+            width: 130px; /* Reduced size */
+            height: 130px; /* Reduced size */
             border-radius: 50%;
             border: 4px solid #3498db;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -76,18 +76,20 @@
             display: flex;
             max-width: 1200px;
             width: 100%;
+            flex-wrap: wrap; /* Added wrap for better responsiveness */
         }
 
         /* Left side - Profile and Contact Information */
         .left-side {
             flex: 1;
-            padding-right: 40px;
+            padding-right: 30px; /* Reduced padding for more space */
+            margin-bottom: 20px; /* Reduced margin for tight layout */
         }
 
         /* Right side - Skills, Projects, Resume, etc. */
         .right-side {
             flex: 2;
-            padding-left: 40px;
+            padding-left: 30px; /* Reduced padding for more space */
         }
 
         h2 {
@@ -124,6 +126,42 @@
             font-size: 12px;
             color: #7f8c8d;
         }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            /* Profile section */
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .profile-pic {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            /* Container and columns */
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left-side, .right-side {
+                padding: 0;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+
+            /* Links and buttons */
+            a {
+                font-size: 16px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -142,13 +180,13 @@
         <!-- Left side: Contact and personal information -->
         <div class="left-side">
             <h2>📍 Personal Information</h2>
-    <ul>
-        <li><strong>Pronouns:</strong> He/Him</li>
-        <li><strong>Current Location:</strong> Iran, Tehran</li>
-        <li><strong>University:</strong> Shahed University</li>
-        <li><strong>Status:</strong> Single</li>
-    </ul>
-            
+            <ul>
+                <li><strong>Pronouns:</strong> He/Him</li>
+                <li><strong>Current Location:</strong> Iran, Tehran</li>
+                <li><strong>University:</strong> Shahed University</li>
+                <li><strong>Status:</strong> Single</li>
+            </ul>
+
             <h2>📫 Contact Me</h2>
             <ul>
                 <li><strong>Email:</strong> <a href="mailto:Amirmasoud8004@gmail.com">Amirmasoud8004@gmail.com</a></li>
