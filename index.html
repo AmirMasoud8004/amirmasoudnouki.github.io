@@ -44,21 +44,28 @@
         border: 1px solid #ddd;
         padding: 8px;
         text-align: left;
-    }
-.profile-pic {
-    display: block;
-    margin: 20px auto; /* وسط‌چین شدن */
-    width: 200px;
-    border-radius: 50%;
-    border: 3px solid #3498db; /* اضافه کردن یک حاشیه */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* سایه برای جذابیت بیشتر */
+.header-container {
+    display: flex;
+    align-items: center;
 }
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 15px;
+    border: 3px solid #3498db;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+        
 </style>
 </head>
 <body>
+  <div class="header-container">
     <h1>Amir Masoud Nouki👨‍💻</h1>
-   <img src="https://github.com/AmirMasoud8004/amirmasoudnouki.github.io/raw/main/-2147483648_-211069.jpg" 
-     alt="Amir Masoud Nouki" class="profile-pic">
+    <img src="https://github.com/AmirMasoud8004/amirmasoudnouki.github.io/raw/main/-2147483648_-211069.jpg" 
+         alt="Amir Masoud Nouki" class="profile-pic">
+</div>
+
     <p>Welcome to my project portfolio! This page showcases my work in Power Electronics and related fields.</p>
 
     <h2>🔧 Skills</h2>
