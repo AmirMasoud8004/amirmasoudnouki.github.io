@@ -132,7 +132,24 @@
             margin: 0; /* Remove any default margin */
         }
 
-        .left-side ul li {
+        /* Specific style for Personal Information list */
+        .left-side ul.info-list {
+            background-color: #f9f9f9; /* Unified background */
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .left-side ul.info-list li {
+            margin-bottom: 5px; /* Reduced spacing */
+            font-size: 14px;
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
+            list-style: none !important; /* Double-check no bullets */
+        }
+
+        /* Style for Contact Me list (unchanged) */
+        .left-side ul:not(.info-list) li {
             margin-bottom: 10px;
             font-size: 14px;
             line-height: 1.4;
@@ -274,13 +291,15 @@
                 Shahed University, Tehran, Iran
             </div>
 
-           <ul>
+            <h2>📍 Personal Information</h2>
+            <ul class="info-list">
                 <li><i class="fas fa-map-marker-alt"></i> Tehran, Iran</li>
                 <li><i class="fas fa-male"></i> He/Him</li>
                 <li><i class="fas fa-heart-broken"></i> Single</li>
+                <li><i class="fas fa-language"></i> Languages: Persian (Native), English (Fluent)</li>
             </ul>
 
-            <h2> Contact Me</h2>
+            <h2>📫 Contact Me</h2>
             <ul>
                 <li><i class="fas fa-phone"></i> (+98) 9150685949</li>
                 <li><i class="fas fa-envelope"></i> <a href="mailto:Amirmasoud8004@gmail.com">Amirmasoud8004@gmail.com</a></li>
@@ -296,13 +315,10 @@
         <div class="right-side">
             <!-- Personal Information -->
             <div id="personal-info" class="section active">
-                <h2>📍 Personal Information</h2>
                 <ul>
                     <li><strong>Pronouns:</strong> He/Him</li>
                     <li><strong>Current Location:</strong> Tehran, Iran</li>
                     <li><strong>Status:</strong> Single</li>
-                    <li><strong>Nationality:</strong> Iranian</li>
-                    <li><strong>Languages:</strong> Persian (Native), English (Fluent)</li>
                 </ul>
             </div>
 
@@ -322,7 +338,6 @@
                 <h2>📚 Publications</h2>
                 <ul>
                     <li>Currently, I have no publications. Stay tuned for future updates!</li>
-                    <li>Working on a paper about "Power Oscillation Detection Techniques" to be submitted in 2025.</li>
                 </ul>
             </div>
 
@@ -366,7 +381,7 @@
 
     <!-- Footer -->
     <div class="footer">
-        <p>Last updated: March 17, 2025</p>
+        <p>Last updated: March 22, 2025</p>
     </div>
 
     <!-- JavaScript for dynamic content switching -->
