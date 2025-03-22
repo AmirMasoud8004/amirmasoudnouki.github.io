@@ -12,67 +12,20 @@
             margin: 0;
             padding: 20px;
             line-height: 1.6;
-            background-color: #f5f5dc; /* Creamy background */
+            background-color: #f8f9fa; /* Light grayish background */
             color: #333; /* Dark text */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
-        /* Profile section - Image and Name */
-        .profile-section {
-            display: flex;
-            align-items: center;
-            text-align: left;
-            width: 100%;
-            background-color: #ffffff; /* White background for header */
-            padding: 20px;
-            border-radius: 8px 8px 0 0; /* Rounded top corners */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 0; /* Remove bottom margin to stick to nav-bar */
-        }
-
-        .profile-pic {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            border: 4px solid #c68e3f; /* Darker creamy border */
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            margin-right: 20px;
-            animation: profilePicAnim 1s forwards;
-        }
-
-        @keyframes profilePicAnim {
-            0% { opacity: 0; transform: scale(0.5); }
-            100% { opacity: 1; transform: scale(1); }
-        }
-
-        .profile-text h1 {
-            margin: 0;
-            font-size: 32px;
-            color: #c68e3f; /* Darker creamy text */
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .profile-text p {
-            font-size: 18px;
-            color: #666;
-        }
-
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
         /* Navigation bar at the top */
         .nav-bar {
-            background: linear-gradient(to right, #ffffff, #f0f0f0); /* Gradient background */
-            padding: 8px 20px; /* Reduced padding for smaller height */
-            border-bottom: 1px solid #ddd;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            border-radius: 0 0 8px 8px;
+            background-color: #ffffff; /* White background */
+            padding: 8px 20px;
+            border-bottom: 1px solid #e0e0e0;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            border-radius: 5px;
             margin-bottom: 20px;
         }
 
@@ -85,27 +38,27 @@
         }
 
         .nav-menu li {
-            padding: 10px 20px; /* Adjusted padding */
+            padding: 10px 20px;
             margin: 0 5px;
-            background-color: #e0e0e0;
-            border-radius: 20px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 14px; /* Smaller font size */
+            font-size: 14px;
             font-weight: 500;
             transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
         }
 
         .nav-menu li:hover {
-            background-color: #c68e3f; /* Darker creamy on hover */
+            background-color: #2b6cb0; /* Dark blue on hover */
             color: #ffffff;
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .nav-menu li.active {
-            background-color: #c68e3f;
+            background-color: #2b6cb0;
             color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         /* Main content section with two columns */
@@ -121,18 +74,42 @@
             width: 300px;
             padding: 20px;
             background-color: #ffffff;
-            border-right: 1px solid #ddd;
+            border-right: 1px solid #e0e0e0;
             position: sticky;
             top: 20px;
             height: fit-content;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .profile-pic {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 3px solid #4a4a4a; /* Dark gray border */
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto 15px;
+            animation: profilePicAnim 1s forwards;
+        }
+
+        @keyframes profilePicAnim {
+            0% { opacity: 0; transform: scale(0.5); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .profile-name {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #4a4a4a; /* Dark gray */
+            margin-bottom: 20px;
         }
 
         .left-side h2 {
-            color: #c68e3f; /* Darker creamy */
-            font-size: 22px; /* Slightly smaller */
-            margin-bottom: 10px; /* Reduced margin */
+            color: #4a4a4a; /* Dark gray */
+            font-size: 22px;
+            margin-bottom: 10px;
         }
 
         .left-side ul {
@@ -141,9 +118,9 @@
         }
 
         .left-side ul li {
-            margin-bottom: 8px; /* Reduced margin */
-            font-size: 14px; /* Smaller font size */
-            line-height: 1.4; /* Reduced line height */
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.4;
         }
 
         /* Right side - Dynamic content */
@@ -151,8 +128,8 @@
             flex: 1;
             padding: 20px;
             background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
 
         .section {
@@ -166,9 +143,14 @@
             display: block;
         }
 
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
         h2 {
-            color: #c68e3f; /* Darker creamy */
-            border-bottom: 2px solid #ddd;
+            color: #4a4a4a; /* Dark gray */
+            border-bottom: 2px solid #e0e0e0;
             padding-bottom: 10px;
             margin-top: 30px;
         }
@@ -192,13 +174,13 @@
         }
 
         a {
-            color: #c68e3f; /* Darker creamy */
+            color: #2b6cb0; /* Dark blue */
             text-decoration: none;
             transition: color 0.3s, transform 0.3s;
         }
 
         a:hover {
-            color: #a3722d;
+            color: #1a4971;
             text-decoration: underline;
             transform: scale(1.1);
         }
@@ -209,7 +191,7 @@
             margin-top: 40px;
             font-size: 12px;
             color: #666;
-            border-top: 1px solid #ddd;
+            border-top: 1px solid #e0e0e0;
             padding-top: 20px;
         }
 
@@ -223,7 +205,7 @@
                 width: 100%;
                 position: static;
                 border-right: none;
-                border-bottom: 1px solid #ddd;
+                border-bottom: 1px solid #e0e0e0;
             }
 
             .right-side {
@@ -242,16 +224,6 @@
     </style>
 </head>
 <body>
-    <!-- Profile section: Image and Name -->
-    <div class="profile-section">
-        <img src="https://github.com/AmirMasoud8004/amirmasoudnouki.github.io/raw/main/-2147483648_-211069.jpg" 
-             alt="Amir Masoud Nouki" class="profile-pic">
-        <div class="profile-text">
-            <h1>Amir Masoud Nouki 👨‍💻</h1>
-            <p>Welcome to my personal website!</p>
-        </div>
-    </div>
-
     <!-- Navigation bar at the top -->
     <div class="nav-bar">
         <ul class="nav-menu">
@@ -268,11 +240,18 @@
     <div class="container">
         <!-- Left side: Fixed personal info -->
         <div class="left-side">
+            <!-- Profile: Image and Name -->
+            <img src="https://github.com/AmirMasoud8004/amirmasoudnouki.github.io/raw/main/-2147483648_-211069.jpg" 
+                 alt="Amir Masoud Nouki" class="profile-pic">
+            <div class="profile-name">Amir Masoud Nouki</div>
+
             <h2>📍 Personal Information</h2>
             <ul>
                 <li><strong>Pronouns:</strong> He/Him</li>
                 <li><strong>Current Location:</strong> Tehran, Iran</li>
                 <li><strong>Status:</strong> Single</li>
+                <li><strong>Nationality:</strong> Iranian</li>
+                <li><strong>Languages:</strong> Persian (Native), English (Fluent)</li>
             </ul>
 
             <h2>📫 Contact Me</h2>
@@ -281,6 +260,7 @@
                 <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/amir-masoud-nouki-1744982b2/">Amir Masoud Nouki</a></li>
                 <li><strong>Phone:</strong> (+98) 9150685949</li>
                 <li><strong>Telegram:</strong> <a href="https://t.me/a_m_n_807">@a_m_n_807</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/AmirMasoud8004">AmirMasoud8004</a></li>
             </ul>
         </div>
 
@@ -293,6 +273,8 @@
                     <li><strong>Pronouns:</strong> He/Him</li>
                     <li><strong>Current Location:</strong> Tehran, Iran</li>
                     <li><strong>Status:</strong> Single</li>
+                    <li><strong>Nationality:</strong> Iranian</li>
+                    <li><strong>Languages:</strong> Persian (Native), English (Fluent)</li>
                 </ul>
             </div>
 
@@ -300,8 +282,10 @@
             <div id="education" class="section">
                 <h2>🎓 Education</h2>
                 <ul>
-                    <li><strong>M.Sc. in Power Electronics</strong> - Shahed University, Tehran, Iran (Ongoing)</li>
-                    <li><strong>B.Sc. in Power Systems</strong> - University of Shahrood, Iran</li>
+                    <li><strong>M.Sc. in Power Electronics</strong> - Shahed University, Tehran, Iran (Ongoing)<br>
+                        Focus: High-efficiency converters for renewable energy systems.</li>
+                    <li><strong>B.Sc. in Power Systems</strong> - University of Shahrood, Iran (Graduated: 2022)<br>
+                        Thesis: Analysis of Power System Stability Using MATLAB.</li>
                 </ul>
             </div>
 
@@ -310,6 +294,7 @@
                 <h2>📚 Publications</h2>
                 <ul>
                     <li>Currently, I have no publications. Stay tuned for future updates!</li>
+                    <li>Working on a paper about "Power Oscillation Detection Techniques" to be submitted in 2025.</li>
                 </ul>
             </div>
 
@@ -318,9 +303,11 @@
                 <h2>🛠️ Experiences</h2>
                 <ul>
                     <li><strong>Power Oscillation Detection in Power Systems</strong> (Khorasan Regional Electricity Co., Sep 2023)<br>
-                        Investigated and analyzed power oscillation detection techniques using MATLAB and DIgSILENT.</li>
+                        Investigated and analyzed power oscillation detection techniques using MATLAB and DIgSILENT.<br>
+                        Achieved a 15% improvement in detection accuracy through optimized algorithms.</li>
                     <li><strong>PLC Programming Project</strong> (Mahya Sanat Co., Sep 2022)<br>
-                        Performed beginner-level programming for Siemens S7-400 PLC using Siemens TIA Portal.</li>
+                        Performed beginner-level programming for Siemens S7-400 PLC using Siemens TIA Portal.<br>
+                        Successfully automated a small-scale industrial process.</li>
                 </ul>
             </div>
 
@@ -329,6 +316,7 @@
                 <h2>📄 Resume</h2>
                 <ul>
                     <li>Download my full resume <a href="https://github.com/AmirMasoud8004/amirmasoudnouki.github.io/raw/main/CV_Mar2025.pdf">here</a>.</li>
+                    <li>View my LinkedIn profile for more details: <a href="https://linkedin.com/in/amir-masoud-nouki-1744982b2/">LinkedIn</a>.</li>
                 </ul>
             </div>
 
@@ -340,6 +328,7 @@
                     <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/amir-masoud-nouki-1744982b2/">Amir Masoud Nouki</a></li>
                     <li><strong>Phone:</strong> (+98) 9150685949</li>
                     <li><strong>Telegram:</strong> <a href="https://t.me/a_m_n_807">@a_m_n_807</a></li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/AmirMasoud8004">AmirMasoud8004</a></li>
                 </ul>
             </div>
         </div>
