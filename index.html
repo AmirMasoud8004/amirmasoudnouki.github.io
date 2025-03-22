@@ -3,58 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amir Masoud Nouki - Project Portfolio</title>
+    <title>Amir Masoud Nouki - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         /* Base styles */
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
             line-height: 1.6;
-            background-color: #f0f4f8;
-            color: #333;
+            background-color: #1a1a1a; /* Dark background */
+            color: #ffffff; /* White text */
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Align all content to the left */
-            border: 1px solid #ddd; /* Light border around the whole page */
-            padding: 20px; /* Padding around the body */
-            border-radius: 10px; /* Slightly rounded corners */
+            min-height: 100vh;
         }
 
         /* Profile section - Image and Name */
         .profile-section {
             display: flex;
             align-items: center;
-            margin-bottom: 20px; /* Reduced margin for tighter layout */
+            margin-bottom: 20px;
             text-align: left;
             width: 100%;
-            border-bottom: 1px solid #ddd; /* Line separating the profile section */
+            border-bottom: 1px solid #444;
             padding-bottom: 20px;
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
         }
 
         .profile-pic {
-            width: 130px; /* Reduced size */
-            height: 130px; /* Reduced size */
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            border: 4px solid #3498db;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            border: 4px solid #d4af37; /* Gold border */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
             margin-right: 20px;
             animation: profilePicAnim 1s forwards;
         }
 
         @keyframes profilePicAnim {
-            0% {
-                opacity: 0;
-                transform: scale(0.5);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
+            0% { opacity: 0; transform: scale(0.5); }
+            100% { opacity: 1; transform: scale(1); }
         }
 
         .profile-text h1 {
             margin: 0;
             font-size: 32px;
+            color: #d4af37; /* Gold text */
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 0.8s ease-out forwards;
@@ -62,113 +59,153 @@
 
         .profile-text p {
             font-size: 18px;
-            color: #777;
+            color: #cccccc;
         }
 
         @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* Container for skills, projects, resume */
+        /* Main content section with two columns */
         .container {
             display: flex;
-            max-width: 1200px;
+            flex: 1;
             width: 100%;
-            flex-wrap: wrap; /* Added wrap for better responsiveness */
-            border-top: 1px solid #ddd; /* Line separating the top from the main content */
+            border-top: 1px solid #444;
             padding-top: 20px;
         }
 
-        /* Left side - Profile and Contact Information */
+        /* Left side - Fixed navigation and personal info */
         .left-side {
-            flex: 1;
-            padding-right: 30px; /* Reduced padding for more space */
-            margin-bottom: 20px; /* Reduced margin for tight layout */
-            border-right: 1px solid #ddd; /* Line separating left and right sections */
-            padding-right: 30px;
+            width: 300px;
+            padding: 20px;
+            background-color: #2c2c2c;
+            border-right: 1px solid #444;
+            position: sticky;
+            top: 20px;
+            height: fit-content;
         }
 
-        /* Right side - Skills, Projects, Resume, etc. */
+        .left-side h2 {
+            color: #d4af37;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .left-side ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .left-side ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        /* Navigation menu */
+        .nav-menu {
+            margin-top: 20px;
+        }
+
+        .nav-menu li {
+            padding: 10px;
+            background-color: #3a3a3a;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .nav-menu li:hover {
+            background-color: #d4af37;
+            color: #1a1a1a;
+            transform: scale(1.05);
+        }
+
+        .nav-menu li.active {
+            background-color: #d4af37;
+            color: #1a1a1a;
+        }
+
+        /* Right side - Dynamic content */
         .right-side {
-            flex: 2;
-            padding-left: 30px; /* Reduced padding for more space */
+            flex: 1;
+            padding: 20px;
         }
 
-        h2 {
+        .section {
+            display: none;
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 0.8s ease-out forwards;
         }
 
-        /* Hover effects for links and buttons */
+        .section.active {
+            display: block;
+        }
+
+        h2 {
+            color: #d4af37;
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background-color: #2c2c2c;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        ul li:hover {
+            background-color: #3a3a3a;
+            transform: scale(1.02);
+        }
+
         a {
-            color: #3498db;
+            color: #d4af37;
             text-decoration: none;
             transition: color 0.3s, transform 0.3s;
         }
 
         a:hover {
-            color: #2980b9;
+            color: #b8972e;
             text-decoration: underline;
             transform: scale(1.1);
         }
 
-        /* Hover effects for list items (projects) */
-        ul li:hover {
-            background-color: #f0f4f8;
-            transform: scale(1.05);
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-
-        /* Footer - Contact Section */
+        /* Footer */
         .footer {
-            width: 100%;
             text-align: center;
             margin-top: 40px;
             font-size: 12px;
-            color: #7f8c8d;
+            color: #cccccc;
+            border-top: 1px solid #444;
+            padding-top: 20px;
         }
 
         /* Responsive styles */
         @media (max-width: 768px) {
-            /* Profile section */
-            .profile-section {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .profile-pic {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-
-            /* Container and columns */
             .container {
                 flex-direction: column;
-                align-items: center;
             }
 
-            .left-side, .right-side {
-                padding: 0;
-                margin-bottom: 20px;
+            .left-side {
                 width: 100%;
+                position: static;
+                border-right: none;
+                border-bottom: 1px solid #444;
             }
 
-            /* Links and buttons */
-            a {
-                font-size: 16px;
-            }
-
-            h2 {
-                font-size: 24px;
+            .right-side {
+                padding: 20px;
             }
         }
     </style>
@@ -186,13 +223,12 @@
 
     <!-- Main content section with two columns -->
     <div class="container">
-        <!-- Left side: Contact and personal information -->
+        <!-- Left side: Fixed navigation and personal info -->
         <div class="left-side">
             <h2>📍 Personal Information</h2>
             <ul>
                 <li><strong>Pronouns:</strong> He/Him</li>
                 <li><strong>Current Location:</strong> Tehran, Iran</li>
-                <li><strong>University:</strong> Shahed University</li>
                 <li><strong>Status:</strong> Single</li>
             </ul>
 
@@ -201,44 +237,105 @@
                 <li><strong>Email:</strong> <a href="mailto:Amirmasoud8004@gmail.com">Amirmasoud8004@gmail.com</a></li>
                 <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/amir-masoud-nouki-1744982b2/">Amir Masoud Nouki</a></li>
                 <li><strong>Phone:</strong> (+98) 9150685949</li>
-                <li><strong>Telegram:</strong> <a href="https://t.me/YourTelegramID">@a_m_n_807</a></li>
+                <li><strong>Telegram:</strong> <a href="https://t.me/a_m_n_807">@a_m_n_807</a></li>
+            </ul>
+
+            <h2>Navigation</h2>
+            <ul class="nav-menu">
+                <li data-section="personal-info" class="active">Personal Information</li>
+                <li data-section="education">Education</li>
+                <li data-section="publications">Publications</li>
+                <li data-section="experiences">Experiences</li>
+                <li data-section="resume">Resume</li>
+                <li data-section="contact">Contact Me</li>
             </ul>
         </div>
 
-        <!-- Right side: Skills, Projects, Resume, etc. -->
+        <!-- Right side: Dynamic content -->
         <div class="right-side">
-            <h2>🔧 Skills</h2>
-            <ul>
-                <li><strong>Applications and Scientific Tools:</strong> MATLAB, Proteus, Code Vision AVR, Altium Designer, FEMM, EMTP, Maxwell, DIgSILENT, AutoCAD</li>
-                <li><strong>Programming Languages:</strong> C, MATLAB, Python</li>
-                <li><strong>Operating Systems:</strong> Microsoft Windows, Linux</li>
-                <li><strong>Typesetting:</strong> Microsoft Word, LaTeX</li>
-            </ul>
+            <!-- Personal Information -->
+            <div id="personal-info" class="section active">
+                <h2>📍 Personal Information</h2>
+                <ul>
+                    <li><strong>Pronouns:</strong> He/Him</li>
+                    <li><strong>Current Location:</strong> Tehran, Iran</li>
+                    <li><strong>Status:</strong> Single</li>
+                </ul>
+            </div>
 
-            <h2>🛠️ Projects</h2>
-            <ul>
-                <li><strong>Power Oscillation Detection in Power Systems</strong> (Khorasan Regional Electricity Co., Sep 2023)</li>
-                <li><strong>PLC Programming Project</strong> (Mahya Sanat Co., Sep 2022)</li>
-            </ul>
+            <!-- Education -->
+            <div id="education" class="section">
+                <h2>🎓 Education</h2>
+                <ul>
+                    <li><strong>M.Sc. in Power Electronics</strong> - Shahed University, Tehran, Iran (Ongoing)</li>
+                    <li><strong>B.Sc. in Power Systems</strong> - University of Shahrood, Iran</li>
+                </ul>
+            </div>
 
-            <h2>📄 Resume</h2>
-            <ul>
-                <p>Download my full resume <a href="https://github.com/Amirmasoudnouki/Amirmasoudnouki.github.io/blob/main/CV_Mar2025.pdf">here</a>.</p>
-            </ul>
+            <!-- Publications -->
+            <div id="publications" class="section">
+                <h2>📚 Publications</h2>
+                <ul>
+                    <li>Currently, I have no publications. Stay tuned for future updates!</li>
+                </ul>
+            </div>
 
-            <h2>🎯 Hobbies</h2>
-            <ul>
-                <li><strong>Reading technical books</strong></li>
-                <li><strong>Writing technical blogs</strong></li>
-                <li><strong>Listening to music</strong></li>
-                <li><strong>Outdoor activities (hiking, camping)</strong></li>
-            </ul>
+            <!-- Experiences -->
+            <div id="experiences" class="section">
+                <h2>🛠️ Experiences</h2>
+                <ul>
+                    <li><strong>Power Oscillation Detection in Power Systems</strong> (Khorasan Regional Electricity Co., Sep 2023)<br>
+                        Investigated and analyzed power oscillation detection techniques using MATLAB and DIgSILENT.</li>
+                    <li><strong>PLC Programming Project</strong> (Mahya Sanat Co., Sep 2022)<br>
+                        Performed beginner-level programming for Siemens S7-400 PLC using Siemens TIA Portal.</li>
+                </ul>
+            </div>
+
+            <!-- Resume -->
+            <div id="resume" class="section">
+                <h2>📄 Resume</h2>
+                <ul>
+                    <li>Download my full resume <a href="https://github.com/AmirMasoud8004/amirmasoudnouki.github.io/raw/main/CV_Mar2025.pdf">here</a>.</li>
+                </ul>
+            </div>
+
+            <!-- Contact Me -->
+            <div id="contact" class="section">
+                <h2>📫 Contact Me</h2>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:Amirmasoud8004@gmail.com">Amirmasoud8004@gmail.com</a></li>
+                    <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/amir-masoud-nouki-1744982b2/">Amir Masoud Nouki</a></li>
+                    <li><strong>Phone:</strong> (+98) 9150685949</li>
+                    <li><strong>Telegram:</strong> <a href="https://t.me/a_m_n_807">@a_m_n_807</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <!-- Footer - Last updated -->
+    <!-- Footer -->
     <div class="footer">
         <p>Last updated: March 17, 2025</p>
     </div>
+
+    <!-- JavaScript for dynamic content switching -->
+    <script>
+        const navItems = document.querySelectorAll('.nav-menu li');
+        const sections = document.querySelectorAll('.section');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active class from all nav items
+                navItems.forEach(nav => nav.classList.remove('active'));
+                // Add active class to clicked item
+                item.classList.add('active');
+
+                // Hide all sections
+                sections.forEach(section => section.classList.remove('active'));
+                // Show the selected section
+                const sectionId = item.getAttribute('data-section');
+                document.getElementById(sectionId).classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
