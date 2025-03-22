@@ -36,7 +36,7 @@
             width: 130px;
             height: 130px;
             border-radius: 50%;
-            border: 4px solid #d2b48c; /* Darker creamy border */
+            border: 4px solid #c68e3f; /* Darker creamy border */
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
             margin-right: 20px;
             animation: profilePicAnim 1s forwards;
@@ -50,7 +50,7 @@
         .profile-text h1 {
             margin: 0;
             font-size: 32px;
-            color: #d2b48c; /* Darker creamy text */
+            color: #c68e3f; /* Darker creamy text */
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 0.8s ease-out forwards;
@@ -69,10 +69,10 @@
         /* Navigation bar at the top */
         .nav-bar {
             background: linear-gradient(to right, #ffffff, #f0f0f0); /* Gradient background */
-            padding: 10px 20px;
+            padding: 8px 20px; /* Reduced padding for smaller height */
             border-bottom: 1px solid #ddd;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Softer shadow */
-            border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            border-radius: 0 0 8px 8px;
             margin-bottom: 20px;
         }
 
@@ -85,25 +85,25 @@
         }
 
         .nav-menu li {
-            padding: 12px 25px;
+            padding: 10px 20px; /* Adjusted padding */
             margin: 0 5px;
             background-color: #e0e0e0;
-            border-radius: 20px; /* More rounded corners */
+            border-radius: 20px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 14px; /* Smaller font size */
             font-weight: 500;
             transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
         }
 
         .nav-menu li:hover {
-            background-color: #d2b48c; /* Darker creamy on hover */
+            background-color: #c68e3f; /* Darker creamy on hover */
             color: #ffffff;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .nav-menu li.active {
-            background-color: #d2b48c;
+            background-color: #c68e3f;
             color: #ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -130,9 +130,9 @@
         }
 
         .left-side h2 {
-            color: #d2b48c; /* Darker creamy */
-            font-size: 24px;
-            margin-bottom: 15px;
+            color: #c68e3f; /* Darker creamy */
+            font-size: 22px; /* Slightly smaller */
+            margin-bottom: 10px; /* Reduced margin */
         }
 
         .left-side ul {
@@ -141,8 +141,9 @@
         }
 
         .left-side ul li {
-            margin-bottom: 10px;
-            font-size: 16px;
+            margin-bottom: 8px; /* Reduced margin */
+            font-size: 14px; /* Smaller font size */
+            line-height: 1.4; /* Reduced line height */
         }
 
         /* Right side - Dynamic content */
@@ -166,7 +167,7 @@
         }
 
         h2 {
-            color: #d2b48c; /* Darker creamy */
+            color: #c68e3f; /* Darker creamy */
             border-bottom: 2px solid #ddd;
             padding-bottom: 10px;
             margin-top: 30px;
@@ -191,13 +192,13 @@
         }
 
         a {
-            color: #d2b48c; /* Darker creamy */
+            color: #c68e3f; /* Darker creamy */
             text-decoration: none;
             transition: color 0.3s, transform 0.3s;
         }
 
         a:hover {
-            color: #b8972e;
+            color: #a3722d;
             text-decoration: underline;
             transform: scale(1.1);
         }
@@ -315,7 +316,6 @@
             <!-- Experiences -->
             <div id="experiences" class="section">
                 <h2>🛠️ Experiences</h2>
-               .ConcurrentModificationException: null
                 <ul>
                     <li><strong>Power Oscillation Detection in Power Systems</strong> (Khorasan Regional Electricity Co., Sep 2023)<br>
                         Investigated and analyzed power oscillation detection techniques using MATLAB and DIgSILENT.</li>
