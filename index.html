@@ -26,7 +26,7 @@
             border-bottom: 1px solid #e0e0e0;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
             border-radius: 5px;
-            margin-bottom: 20px;
+            margin-bottom: 2px; /* Small gap to left-side */
         }
 
         .nav-menu {
@@ -49,14 +49,14 @@
         }
 
         .nav-menu li:hover {
-            background-color: #2b6cb0; /* Dark blue on hover */
+            background-color: #2e7d32; /* Dark green on hover */
             color: #ffffff;
             transform: translateY(-2px);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .nav-menu li.active {
-            background-color: #2b6cb0;
+            background-color: #2e7d32; /* Dark green */
             color: #ffffff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
@@ -66,19 +66,20 @@
             display: flex;
             flex: 1;
             width: 100%;
-            padding-top: 20px;
+            padding-top: 0; /* Remove padding to align with nav-bar */
         }
 
         /* Left side - Fixed personal info */
         .left-side {
             width: 300px;
             padding: 20px;
+            padding-top: 10px; /* Reduced top padding to bring content up */
             background-color: #ffffff;
             border-right: 1px solid #e0e0e0;
             position: sticky;
-            top: 20px;
+            top: 0; /* Align with top */
             height: fit-content;
-            border-radius: 5px;
+            border-radius: 0 5px 5px 5px; /* No top-left radius to appear connected */
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
 
@@ -174,13 +175,13 @@
         }
 
         a {
-            color: #2b6cb0; /* Dark blue */
+            color: #2e7d32; /* Dark green */
             text-decoration: none;
             transition: color 0.3s, transform 0.3s;
         }
 
         a:hover {
-            color: #1a4971;
+            color: #1b5e20;
             text-decoration: underline;
             transform: scale(1.1);
         }
